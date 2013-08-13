@@ -36,6 +36,10 @@
     [super viewDidLoad];
     self.title = @"TODOS";
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewTodo)];
+    
+    self.navigationItem.rightBarButtonItem = addButton;
+    
     UITapGestureRecognizer *tgs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyBoard)];
     [self.view addGestureRecognizer:tgs];
     
@@ -52,6 +56,13 @@
 #pragma mark - local methods
 -(void) removeKeyBoard {
     [self.view endEditing:YES];
+}
+
+-(void) addNewTodo {
+    self.todoModel = [@[@""] arrayByAddingObjectsFromArray:self.todoModel];
+    [self.tableView reloadData];
+    TodoCell *firstCell = (TodoCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [firstCell.textCell becomeFirstResponder];
 }
 
 #pragma mark - Table view data source
