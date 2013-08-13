@@ -10,7 +10,7 @@
 #import "TodoCell.h"
 
 @interface TodoVC ()
-@property (strong,nonatomic) NSMutableArray *todoModel;
+@property (strong,nonatomic) NSArray *todoModel;
 @end
 
 @implementation TodoVC
@@ -19,11 +19,16 @@
 
 #pragma mark - setters and getters
 
--(NSMutableArray *) todoModel {
+-(NSArray *) todoModel {
     if (!_todoModel) {
-        _todoModel = [@[@"foo", @"bar"] mutableCopy];
+        _todoModel = @[@"foo", @"bar"];
     }
     return _todoModel;
+}
+
+-(void) setTodoModel:(NSArray *)todoModel{
+    _todoModel = todoModel;
+    NSLog(@"New Model is %@", _todoModel);
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -38,12 +43,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.title = @"TODOS";
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,32 +72,25 @@
     
     // Configure the cell...
     cell.textCell.text = [self.todoModel objectAtIndex:indexPath.row];
-    
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        NSMutableArray *mutableModel = [self.todoModel mutableCopy];
+        [mutableModel removeObjectAtIndex:indexPath.row];
+        self.todoModel = [mutableModel copy];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.
