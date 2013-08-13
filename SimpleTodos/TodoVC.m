@@ -11,11 +11,13 @@
 
 @interface TodoVC () <todoCellDelegate>
 @property (strong,nonatomic) NSArray *todoModel;
+@property (strong,nonatomic) UITapGestureRecognizer *tgs;
 @end
 
 @implementation TodoVC
 
 @synthesize todoModel = _todoModel;
+@synthesize tgs = _tgs;
 
 #pragma mark - setters and getters
 
@@ -40,8 +42,7 @@
     
     self.navigationItem.rightBarButtonItem = addButton;
     
-    UITapGestureRecognizer *tgs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyBoard)];
-    [self.view addGestureRecognizer:tgs];
+    self.tgs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyBoard)];
     
 }
 
@@ -51,6 +52,11 @@
     NSMutableArray *mutableModel = [self.todoModel mutableCopy];
     [mutableModel setObject:textField.text atIndexedSubscript:[self.tableView indexPathForCell:cell].row];
     self.todoModel = [mutableModel copy];
+    [self.view removeGestureRecognizer:self.tgs];
+}
+
+-(void)todoCell:(TodoCell *)cell onBeginEditing:(UITextField *)textField {
+    [self.view addGestureRecognizer:self.tgs];
 }
 
 #pragma mark - local methods

@@ -13,6 +13,9 @@
 
 -(void)todoCell:(TodoCell *)cell onEndEditing:(UITextField *)textField;
 
+@optional
+-(void)todoCell:(TodoCell *)cell onBeginEditing:(UITextField *)textField;
+
 @end
 
 @interface TodoCell : UITableViewCell

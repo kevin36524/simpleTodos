@@ -19,6 +19,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>
+                            <action selector="editingBegins:" destination="x5V-tJ-leH" eventType="editingDidBegin" id="DSC-hQ-hcl"/>
                             <action selector="editingDone:" destination="x5V-tJ-leH" eventType="editingDidEnd" id="pUT-uY-qS5"/>
                         </connections>
                     </textField>

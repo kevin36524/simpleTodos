@@ -30,4 +30,8 @@
     [self.delegate todoCell:self onEndEditing:sender];
 }
 
+- (IBAction)editingBegins:(id)sender {
+    [self.delegate todoCell:self onBeginEditing:sender];
+}
+
 @end
