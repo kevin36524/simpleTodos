@@ -9,10 +9,21 @@
 #import "TodoVC.h"
 
 @interface TodoVC ()
-
+@property (strong,nonatomic) NSMutableArray *todoModel;
 @end
 
 @implementation TodoVC
+
+@synthesize todoModel = _todoModel;
+
+#pragma mark - setters and getters
+
+-(NSMutableArray *) todoModel {
+    if (!_todoModel) {
+        _todoModel = [@[@"foo", @"bar"] mutableCopy];
+    }
+    return _todoModel;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,9 +56,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.todoModel count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
