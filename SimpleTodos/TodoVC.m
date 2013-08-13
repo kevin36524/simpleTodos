@@ -28,15 +28,7 @@
 
 -(void) setTodoModel:(NSArray *)todoModel{
     _todoModel = todoModel;
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    NSLog(@"New model is %@",_todoModel);
 }
 
 - (void)viewDidLoad
@@ -44,12 +36,6 @@
     [super viewDidLoad];
     self.title = @"TODOS";
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -91,32 +77,35 @@
     }   
 }
 
-/*
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    NSMutableArray *mutableModel = [self.todoModel mutableCopy];
+    id tempObj = [mutableModel objectAtIndex:fromIndexPath.row];
+    [mutableModel removeObjectAtIndex:fromIndexPath.row];
+    [mutableModel insertObject:tempObj atIndex:fromIndexPath.row];
+    
+    self.todoModel = [mutableModel copy];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+
+#pragma mark - Legacy Methods
+
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)didReceiveMemoryWarning
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
- */
 
 @end
