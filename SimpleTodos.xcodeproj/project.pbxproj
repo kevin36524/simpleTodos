@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CDA754B17BA5CDF00206B43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDA754A17BA5CDF00206B43 /* Foundation.framework */; };
+		4CDA754D17BA5CDF00206B43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDA754C17BA5CDF00206B43 /* CoreGraphics.framework */; };
+		4CDA754F17BA5CE000206B43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDA754E17BA5CE000206B43 /* UIKit.framework */; };
+		4CDA755517BA5CE000206B43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CDA755317BA5CE000206B43 /* InfoPlist.strings */; };
+		4CDA755717BA5CE000206B43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA755617BA5CE000206B43 /* main.m */; };
+		4CDA755B17BA5CE000206B43 /* TodoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA755A17BA5CE000206B43 /* TodoAppDelegate.m */; };
+		4CDA755D17BA5CE000206B43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDA755C17BA5CE000206B43 /* Images.xcassets */; };
+		4CDA756417BA5CE000206B43 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDA756317BA5CE000206B43 /* XCTest.framework */; };
+		4CDA756517BA5CE000206B43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDA754A17BA5CDF00206B43 /* Foundation.framework */; };
+		4CDA756617BA5CE000206B43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDA754E17BA5CE000206B43 /* UIKit.framework */; };
+		4CDA756E17BA5CE000206B43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CDA756C17BA5CE000206B43 /* InfoPlist.strings */; };
+		4CDA757017BA5CE000206B43 /* SimpleTodosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA756F17BA5CE000206B43 /* SimpleTodosTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CDA756717BA5CE000206B43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CDA753F17BA5CDF00206B43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CDA754617BA5CDF00206B43;
+			remoteInfo = SimpleTodos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CDA754717BA5CDF00206B43 /* SimpleTodos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTodos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDA754A17BA5CDF00206B43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4CDA754C17BA5CDF00206B43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4CDA754E17BA5CE000206B43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4CDA755217BA5CE000206B43 /* SimpleTodos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleTodos-Info.plist"; sourceTree = "<group>"; };
+		4CDA755417BA5CE000206B43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CDA755617BA5CE000206B43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CDA755817BA5CE000206B43 /* SimpleTodos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleTodos-Prefix.pch"; sourceTree = "<group>"; };
+		4CDA755917BA5CE000206B43 /* TodoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoAppDelegate.h; sourceTree = "<group>"; };
+		4CDA755A17BA5CE000206B43 /* TodoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoAppDelegate.m; sourceTree = "<group>"; };
+		4CDA755C17BA5CE000206B43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4CDA756217BA5CE000206B43 /* SimpleTodosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTodosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDA756317BA5CE000206B43 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4CDA756B17BA5CE000206B43 /* SimpleTodosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleTodosTests-Info.plist"; sourceTree = "<group>"; };
+		4CDA756D17BA5CE000206B43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CDA756F17BA5CE000206B43 /* SimpleTodosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTodosTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CDA754417BA5CDF00206B43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDA754D17BA5CDF00206B43 /* CoreGraphics.framework in Frameworks */,
+				4CDA754F17BA5CE000206B43 /* UIKit.framework in Frameworks */,
+				4CDA754B17BA5CDF00206B43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDA755F17BA5CE000206B43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDA756417BA5CE000206B43 /* XCTest.framework in Frameworks */,
+				4CDA756617BA5CE000206B43 /* UIKit.framework in Frameworks */,
+				4CDA756517BA5CE000206B43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CDA753E17BA5CDF00206B43 = {
+			isa = PBXGroup;
+			children = (
+				4CDA755017BA5CE000206B43 /* SimpleTodos */,
+				4CDA756917BA5CE000206B43 /* SimpleTodosTests */,
+				4CDA754917BA5CDF00206B43 /* Frameworks */,
+				4CDA754817BA5CDF00206B43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CDA754817BA5CDF00206B43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CDA754717BA5CDF00206B43 /* SimpleTodos.app */,
+				4CDA756217BA5CE000206B43 /* SimpleTodosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CDA754917BA5CDF00206B43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CDA754A17BA5CDF00206B43 /* Foundation.framework */,
+				4CDA754C17BA5CDF00206B43 /* CoreGraphics.framework */,
+				4CDA754E17BA5CE000206B43 /* UIKit.framework */,
+				4CDA756317BA5CE000206B43 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CDA755017BA5CE000206B43 /* SimpleTodos */ = {
+			isa = PBXGroup;
+			children = (
+				4CDA755917BA5CE000206B43 /* TodoAppDelegate.h */,
+				4CDA755A17BA5CE000206B43 /* TodoAppDelegate.m */,
+				4CDA755C17BA5CE000206B43 /* Images.xcassets */,
+				4CDA755117BA5CE000206B43 /* Supporting Files */,
+			);
+			path = SimpleTodos;
+			sourceTree = "<group>";
+		};
+		4CDA755117BA5CE000206B43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CDA755217BA5CE000206B43 /* SimpleTodos-Info.plist */,
+				4CDA755317BA5CE000206B43 /* InfoPlist.strings */,
+				4CDA755617BA5CE000206B43 /* main.m */,
+				4CDA755817BA5CE000206B43 /* SimpleTodos-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CDA756917BA5CE000206B43 /* SimpleTodosTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CDA756F17BA5CE000206B43 /* SimpleTodosTests.m */,
+				4CDA756A17BA5CE000206B43 /* Supporting Files */,
+			);
+			path = SimpleTodosTests;
+			sourceTree = "<group>";
+		};
+		4CDA756A17BA5CE000206B43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CDA756B17BA5CE000206B43 /* SimpleTodosTests-Info.plist */,
+				4CDA756C17BA5CE000206B43 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CDA754617BA5CDF00206B43 /* SimpleTodos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CDA757317BA5CE000206B43 /* Build configuration list for PBXNativeTarget "SimpleTodos" */;
+			buildPhases = (
+				4CDA754317BA5CDF00206B43 /* Sources */,
+				4CDA754417BA5CDF00206B43 /* Frameworks */,
+				4CDA754517BA5CDF00206B43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleTodos;
+			productName = SimpleTodos;
+			productReference = 4CDA754717BA5CDF00206B43 /* SimpleTodos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CDA756117BA5CE000206B43 /* SimpleTodosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CDA757617BA5CE000206B43 /* Build configuration list for PBXNativeTarget "SimpleTodosTests" */;
+			buildPhases = (
+				4CDA755E17BA5CE000206B43 /* Sources */,
+				4CDA755F17BA5CE000206B43 /* Frameworks */,
+				4CDA756017BA5CE000206B43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CDA756817BA5CE000206B43 /* PBXTargetDependency */,
+			);
+			name = SimpleTodosTests;
+			productName = SimpleTodosTests;
+			productReference = 4CDA756217BA5CE000206B43 /* SimpleTodosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CDA753F17BA5CDF00206B43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Todo;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Kevin Patel";
+				TargetAttributes = {
+					4CDA756117BA5CE000206B43 = {
+						TestTargetID = 4CDA754617BA5CDF00206B43;
+					};
+				};
+			};
+			buildConfigurationList = 4CDA754217BA5CDF00206B43 /* Build configuration list for PBXProject "SimpleTodos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4CDA753E17BA5CDF00206B43;
+			productRefGroup = 4CDA754817BA5CDF00206B43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CDA754617BA5CDF00206B43 /* SimpleTodos */,
+				4CDA756117BA5CE000206B43 /* SimpleTodosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CDA754517BA5CDF00206B43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDA755517BA5CE000206B43 /* InfoPlist.strings in Resources */,
+				4CDA755D17BA5CE000206B43 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDA756017BA5CE000206B43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDA756E17BA5CE000206B43 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CDA754317BA5CDF00206B43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDA755B17BA5CE000206B43 /* TodoAppDelegate.m in Sources */,
+				4CDA755717BA5CE000206B43 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDA755E17BA5CE000206B43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDA757017BA5CE000206B43 /* SimpleTodosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CDA756817BA5CE000206B43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CDA754617BA5CDF00206B43 /* SimpleTodos */;
+			targetProxy = 4CDA756717BA5CE000206B43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CDA755317BA5CE000206B43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CDA755417BA5CE000206B43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4CDA756C17BA5CE000206B43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CDA756D17BA5CE000206B43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CDA757117BA5CE000206B43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4CDA757217BA5CE000206B43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CDA757417BA5CE000206B43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleTodos/SimpleTodos-Prefix.pch";
+				INFOPLIST_FILE = "SimpleTodos/SimpleTodos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4CDA757517BA5CE000206B43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleTodos/SimpleTodos-Prefix.pch";
+				INFOPLIST_FILE = "SimpleTodos/SimpleTodos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4CDA757717BA5CE000206B43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleTodos.app/SimpleTodos";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleTodos/SimpleTodos-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SimpleTodosTests/SimpleTodosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4CDA757817BA5CE000206B43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleTodos.app/SimpleTodos";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleTodos/SimpleTodos-Prefix.pch";
+				INFOPLIST_FILE = "SimpleTodosTests/SimpleTodosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CDA754217BA5CDF00206B43 /* Build configuration list for PBXProject "SimpleTodos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDA757117BA5CE000206B43 /* Debug */,
+				4CDA757217BA5CE000206B43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CDA757317BA5CE000206B43 /* Build configuration list for PBXNativeTarget "SimpleTodos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDA757417BA5CE000206B43 /* Debug */,
+				4CDA757517BA5CE000206B43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4CDA757617BA5CE000206B43 /* Build configuration list for PBXNativeTarget "SimpleTodosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDA757717BA5CE000206B43 /* Debug */,
+				4CDA757817BA5CE000206B43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CDA753F17BA5CDF00206B43 /* Project object */;
+}
