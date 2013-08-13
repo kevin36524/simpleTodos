@@ -7,6 +7,7 @@
 //
 
 #import "TodoVC.h"
+#import "TodoCell.h"
 
 @interface TodoVC ()
 @property (strong,nonatomic) NSMutableArray *todoModel;
@@ -61,10 +62,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"todo Cell";
+    
+    UINib *customNib = [UINib nibWithNibName:@"TodoCell" bundle:nil];
+    [self.tableView registerNib:customNib forCellReuseIdentifier:CellIdentifier];
+    
+    TodoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textCell.text = [self.todoModel objectAtIndex:indexPath.row];
     
     return cell;
 }
