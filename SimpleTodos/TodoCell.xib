@@ -18,6 +18,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="editingDone:" destination="x5V-tJ-leH" eventType="editingDidEnd" id="pUT-uY-qS5"/>
+                        </connections>
                     </textField>
                 </subviews>
             </tableViewCellContentView>

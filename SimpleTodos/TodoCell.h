@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TodoCell;
+
+@protocol todoCellDelegate <NSObject>
+
+-(void)todoCell:(TodoCell *)cell onEndEditing:(UITextField *)textField;
+
+@end
 
 @interface TodoCell : UITableViewCell
 @property (unsafe_unretained, nonatomic) IBOutlet UITextField *textCell;
-
+@property (weak,nonatomic) id <todoCellDelegate> delegate;
 @end

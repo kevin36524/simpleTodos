@@ -26,4 +26,8 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)editingDone:(id)sender {
+    [self.delegate todoCell:self onEndEditing:sender];
+}
+
 @end

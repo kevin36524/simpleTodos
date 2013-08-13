@@ -9,7 +9,7 @@
 #import "TodoVC.h"
 #import "TodoCell.h"
 
-@interface TodoVC ()
+@interface TodoVC () <todoCellDelegate>
 @property (strong,nonatomic) NSArray *todoModel;
 @end
 
@@ -36,10 +36,25 @@
     [super viewDidLoad];
     self.title = @"TODOS";
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    UITapGestureRecognizer *tgs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeKeyBoard)];
+    [self.view addGestureRecognizer:tgs];
+    
+}
+
+
+#pragma mark - Todo Cell delegates
+-(void) todoCell:(TodoCell *)cell onEndEditing:(UITextField *)textField {
+    NSMutableArray *mutableModel = [self.todoModel mutableCopy];
+    [mutableModel setObject:textField.text atIndexedSubscript:[self.tableView indexPathForCell:cell].row];
+    self.todoModel = [mutableModel copy];
+}
+
+#pragma mark - local methods
+-(void) removeKeyBoard {
+    [self.view endEditing:YES];
 }
 
 #pragma mark - Table view data source
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -57,9 +72,14 @@
     
     // Configure the cell...
     cell.textCell.text = [self.todoModel objectAtIndex:indexPath.row];
+    cell.delegate = self;
     return cell;
 }
 
+-(UITableViewCellEditingStyle) tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self removeKeyBoard];
+    return UITableViewCellEditingStyleDelete;
+}
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
