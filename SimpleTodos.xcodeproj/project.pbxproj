@@ -19,6 +19,8 @@
 		4CDA756617BA5CE000206B43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CDA754E17BA5CE000206B43 /* UIKit.framework */; };
 		4CDA756E17BA5CE000206B43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CDA756C17BA5CE000206B43 /* InfoPlist.strings */; };
 		4CDA757017BA5CE000206B43 /* SimpleTodosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA756F17BA5CE000206B43 /* SimpleTodosTests.m */; };
+		4CDA757C17BA5D1000206B43 /* TodoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA757B17BA5D1000206B43 /* TodoCell.m */; };
+		4CDA757F17BA5D2200206B43 /* TodoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA757E17BA5D2200206B43 /* TodoVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,11 @@
 		4CDA756B17BA5CE000206B43 /* SimpleTodosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleTodosTests-Info.plist"; sourceTree = "<group>"; };
 		4CDA756D17BA5CE000206B43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CDA756F17BA5CE000206B43 /* SimpleTodosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTodosTests.m; sourceTree = "<group>"; };
+		4CDA757917BA5CFB00206B43 /* TodoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoCell.xib; sourceTree = "<group>"; };
+		4CDA757A17BA5D1000206B43 /* TodoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoCell.h; sourceTree = "<group>"; };
+		4CDA757B17BA5D1000206B43 /* TodoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoCell.m; sourceTree = "<group>"; };
+		4CDA757D17BA5D2200206B43 /* TodoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoVC.h; sourceTree = "<group>"; };
+		4CDA757E17BA5D2200206B43 /* TodoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +118,11 @@
 				4CDA755A17BA5CE000206B43 /* TodoAppDelegate.m */,
 				4CDA755C17BA5CE000206B43 /* Images.xcassets */,
 				4CDA755117BA5CE000206B43 /* Supporting Files */,
+				4CDA757917BA5CFB00206B43 /* TodoCell.xib */,
+				4CDA757A17BA5D1000206B43 /* TodoCell.h */,
+				4CDA757B17BA5D1000206B43 /* TodoCell.m */,
+				4CDA757D17BA5D2200206B43 /* TodoVC.h */,
+				4CDA757E17BA5D2200206B43 /* TodoVC.m */,
 			);
 			path = SimpleTodos;
 			sourceTree = "<group>";
@@ -240,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDA757C17BA5D1000206B43 /* TodoCell.m in Sources */,
 				4CDA755B17BA5CE000206B43 /* TodoAppDelegate.m in Sources */,
+				4CDA757F17BA5D2200206B43 /* TodoVC.m in Sources */,
 				4CDA755717BA5CE000206B43 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
