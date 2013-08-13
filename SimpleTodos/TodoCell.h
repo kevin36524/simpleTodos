@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TodoCell : UITableViewCell
+@property (unsafe_unretained, nonatomic) IBOutlet UITextField *textCell;
 
 @end
