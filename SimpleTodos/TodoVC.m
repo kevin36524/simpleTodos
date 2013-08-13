@@ -57,8 +57,20 @@
 #pragma mark - Todo Cell delegates
 -(void) todoCell:(TodoCell *)cell onEndEditing:(UITextField *)textField {
     NSMutableArray *mutableModel = [self.todoModel mutableCopy];
-    [mutableModel setObject:textField.text atIndexedSubscript:[self.tableView indexPathForCell:cell].row];
+    NSString *newText = textField.text;
+    NSUInteger row = [self.tableView indexPathForCell:cell].row;
+    BOOL shouldReload = NO;
+    
+    if ([newText isEqual:@""]) {
+        [mutableModel removeObjectAtIndex:row];
+        shouldReload = YES;
+    } else {
+        [mutableModel setObject:newText atIndexedSubscript:row];
+    }
     self.todoModel = [mutableModel copy];
+    if (shouldReload) {
+        [self.tableView reloadData];
+    }
     [self.view removeGestureRecognizer:self.tgs];
 }
 
@@ -72,6 +84,7 @@
 }
 
 -(void) addNewTodo {
+    [self removeKeyBoard];
     self.todoModel = [@[@""] arrayByAddingObjectsFromArray:self.todoModel];
     [self.tableView reloadData];
     TodoCell *firstCell = (TodoCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
