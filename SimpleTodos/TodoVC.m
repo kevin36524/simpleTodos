@@ -28,7 +28,6 @@
 
 -(void) setTodoModel:(NSArray *)todoModel{
     _todoModel = todoModel;
-    NSLog(@"New Model is %@", _todoModel);
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
