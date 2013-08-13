@@ -9,6 +9,8 @@
 #import "TodoVC.h"
 #import "TodoCell.h"
 
+#define TODOSTOREKEY @"todoStoreKey"
+
 @interface TodoVC () <todoCellDelegate>
 @property (strong,nonatomic) NSArray *todoModel;
 @property (strong,nonatomic) UITapGestureRecognizer *tgs;
@@ -23,14 +25,19 @@
 
 -(NSArray *) todoModel {
     if (!_todoModel) {
-        _todoModel = @[@"foo", @"bar"];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        _todoModel = [defaults objectForKey:TODOSTOREKEY];
+        if (!_todoModel) {
+            _todoModel = @[];
+        }
     }
     return _todoModel;
 }
 
 -(void) setTodoModel:(NSArray *)todoModel{
     _todoModel = todoModel;
-    NSLog(@"New model is %@",_todoModel);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:_todoModel forKey:TODOSTOREKEY];
 }
 
 - (void)viewDidLoad
