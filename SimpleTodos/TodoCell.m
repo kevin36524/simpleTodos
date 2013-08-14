@@ -31,7 +31,9 @@
 }
 
 - (IBAction)editingBegins:(id)sender {
-    [self.delegate todoCell:self onBeginEditing:sender];
+    if ([self.delegate respondsToSelector:@selector(todoCell:onBeginEditing:)]) {
+        [self.delegate todoCell:self onBeginEditing:sender];
+    }
 }
 
 @end

@@ -38,6 +38,7 @@
     _todoModel = todoModel;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:_todoModel forKey:TODOSTOREKEY];
+    [defaults synchronize];
 }
 
 - (void)viewDidLoad

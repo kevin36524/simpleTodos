@@ -19,6 +19,6 @@
 @end
 
 @interface TodoCell : UITableViewCell
-@property (unsafe_unretained, nonatomic) IBOutlet UITextField *textCell;
+@property (weak, nonatomic) IBOutlet UITextField *textCell;
 @property (weak,nonatomic) id <todoCellDelegate> delegate;
 @end
